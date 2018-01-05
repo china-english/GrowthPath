@@ -1,0 +1,5 @@
+export const SERVER_URL = process.env.NODE_ENV === 'production'
+  // ? 'http://ismpappserver.ngrok.cc/api'
+  // : 'http://ismpappserver.ngrok.cc/api'
+  ? 'http://120.194.35.189:60010/api'
+  : 'http://120.194.35.189:60010/api'

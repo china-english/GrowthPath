@@ -1,0 +1,12 @@
+rootProject.name = 'xmsz'
+include ':react-native-xinge-push'
+project(':react-native-xinge-push').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-xinge-push/android')
+include ':react-native-picker'
+project(':react-native-picker').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-picker/android')
+include ':react-native-vector-icons'
+project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+include ':react-native-code-push'
+project(':react-native-code-push').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-code-push/android/app')
+include ':react-native-tencent-xg'
+project(':react-native-tencent-xg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tencent-xg/android')
+include ':app'
