@@ -1,6 +1,6 @@
 ## 前端人员轻松实现后端服务的利器—— BaaS
 
-> BaaS （区块链即服务：Blockchain as a Service）即区块链应用解决方案
+> BaaS （Backend as a Service）后端即服务
 
 作为一名前端、移动端开发人员，想要写个全栈demo或者带领一个初创团队开发一个项目要怎么做？
 
@@ -17,6 +17,10 @@
 > BaaS（Backend as a Service）是一种新型的云服务，旨在为移动和Web应用提供后端云服务，包括云端数据/文件存储、账户管理、消息推送、社交媒体整合等。BaaS是垂直领域的云服务，随着移动互联网的持续火热，BaaS也受到越来越多的开发者的亲睐。它作为应用开发的新模型，可以降低开发者成本，让开发者只需专注于具体的开发工作。
 
 通俗的说，BaaS 就是集成了服务器端绝大多数功能的黑盒系统。使用图形界面的数据库架构设计和傻瓜式管理方式。通过api与前端通讯，让前端人员专注前端开发，轻松管理后端数据和服务。
+
+常见的MBaaS（移动后端服务系统：Mobile Backend as a Service）、SaaS（软件即服务：Software as a Service）、IaaS（基础设施即服务：Infrastructure as a Service）和PaaS（平台即服务：Platform as a Service）早已为业界人士所熟悉 ，BaaS生态系统正从一个小众垂直领域迅速成为非常重要的行业环节
+
+现今国际主流的 BaaS有： Firebase、AWS Mobile Hub、CloudKit、Parse Server、Custom Backend、LeanCloud
 
 ### BaaS 有什么优势？
 
@@ -81,18 +85,21 @@ AV.User.become(sessionToken).then(function(user) {
 
 我曾一度认为，有了 BaaS ，真的可以一个人全栈打天下（nodejs写的restful API服务器在墙角瑟瑟发抖）
 
-### 极力推荐的Parse
+### 极力推荐的 Parse Server
 
-[parse](http://parseplatform.org/#sdks)是由facebook收购后开源的 BaaS 服务。
+[Parse Server](http://parseplatform.org/#sdks)是由facebook收购后开源的 BaaS 服务。
+
+Parse Server 也是这些著名的 BaaS 中唯一开源的
+
 Facebook的维护 + BSD协议，让不想依赖一些 BaaS 服务上或者有自己服务器的人也能轻松构建私有 BaaS 。
 
-parse有支持多种平台的SDK或接口: iOS、 Android 、 JavaScript 、 .NET | Unity | PHP | Arduino | Embedded C | Cloud Code | REST API
+Parse Server 有支持多种平台的SDK或接口: iOS、 Android 、 JavaScript 、 .NET | Unity | PHP | Arduino | Embedded C | Cloud Code | REST API
 
-parse同样也支持邮箱、手机号码验证，消息推送和实时推送等
+Parse Server 同样也支持邮箱、手机号码验证，消息推送和实时推送等
 
 最重要的还是其开源特性，能够让使用者轻松管理搭建适合自己的 BaaS
 
-#### parse还有很多相关package
+#### Parse Server 还有很多相关 package
 
 parse-dashboard （功能强大的dashboard, 除了数据管理和推送消息，还有相关的数据监控面板，同时支持多种用户访问dashboard权限设置）
 
