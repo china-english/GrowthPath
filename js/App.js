@@ -22,10 +22,10 @@ const toastType = {
   warning: 'warning',
   info: 'success'
 }
-window.alert = function (title = '', message = '', type = 'info', duration = 0) {
-  if (type === 'upgrade' || type === 'trade') {
+window.alert = function (title = '', message = '', type = 'success', duration = 3000) {
+  if (type === 'withImage') {
     Toast.show(<ToastMessage title={title} message={message} type={type} />, {
-      duration: 1000,
+      duration,
       shadow: true,
       animation: false,
       hideOnPress: false,
@@ -35,7 +35,7 @@ window.alert = function (title = '', message = '', type = 'info', duration = 0) 
   } else {
     RNToast.show({
       text: `${title}${message ? `\n ${message}` : ''}`,
-      type: toastType[type],
+      type: type,
       duration,
       position: 'top',
       textStyle: {textAlign: 'center', color: 'white'}
