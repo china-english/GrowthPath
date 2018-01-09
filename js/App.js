@@ -12,7 +12,7 @@ import Routes from './Routes'
 import ProgressBar from './components/loaders/ProgressBar'
 import GuideScene from './components/loaders/GuideScene'
 
-import Toast from './components/common/CustomToast'
+import Toast from './components/common/CustomToast/Toast'
 import ToastMessage from './components/common/ToastMessage'
 
 import theme from './themes/base-theme'
@@ -25,7 +25,7 @@ const toastType = {
 window.alert = function (title = '', message = '', type = 'success', duration = 3000) {
   if (type === 'withImage') {
     Toast.show(<ToastMessage title={title} message={message} type={type} />, {
-      duration,
+      duration: 0,
       shadow: true,
       animation: false,
       hideOnPress: false,
@@ -38,7 +38,7 @@ window.alert = function (title = '', message = '', type = 'success', duration = 
       type: type,
       duration,
       position: 'top',
-      textStyle: {textAlign: 'center', color: 'white'}
+      textStyle: {textAlign: 'center', width: '100%', lineHeight: 20}
     })
   }
 }

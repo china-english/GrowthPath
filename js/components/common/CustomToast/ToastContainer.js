@@ -14,8 +14,6 @@ import {
   TouchableOpacity,
   Platform
 } from 'react-native'
-// import I18n from 'react-native-i18n';
-// import { brand } from "../../../theme/variables/commonColor";
 
 const TOAST_MAX_WIDTH = 0.8
 const TOAST_ANIMATION_DURATION = 200
@@ -57,18 +55,10 @@ let styles = {
     justifyContent: 'center',
     alignItems: 'center'
   },
-  upgradeTouchableOpacity: {
-    backgroundColor: 'blue',
-    marginTop: Platform.OS === 'ios' ? -(height / 5 + 20) : -(height / 5 + 30),
-    height: Platform.isPad ? deviceHeight / 15 : 31,
-    width: 80,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  tradeTouchableOpacity: {
-    backgroundColor: 'blue',
-    marginTop: Platform.OS === 'ios' ? -height / 5 : -(height / 5 + 20),
-    height: Platform.isPad ? deviceHeight / 15 : 31,
+  touchableOpacity: {
+    backgroundColor: '#61B843',
+    marginTop: -(height / 6),
+    height: 40,
     width: 80,
     justifyContent: 'center',
     alignItems: 'center'
@@ -219,7 +209,7 @@ class ToastContainer extends Component {
           <View
             style={styles.ViewStyle}>
             {this.props.children}
-            <TouchableOpacity onPress={this._hide} style={props.type === 'upgrade' ? styles.upgradeTouchableOpacity : styles.tradeTouchableOpacity}>
+            <TouchableOpacity onPress={this._hide} style={styles.touchableOpacity}>
               <Text>ok</Text>
             </TouchableOpacity>
           </View>
