@@ -12,10 +12,11 @@ import {
   Button,
   Text,
   Footer,
-  FooterTab
+  FooterTab,
+  Icon
 } from 'native-base'
 
-import FunctionListScreen from './FunctionListScreen'
+import TestForm from './TestForm'
 
 import * as colors from '../../constants/colors'
 
@@ -28,22 +29,26 @@ const styles = {
   }
 }
 
-class HomeScene extends Component {
+class TestScreen extends Component {
   render () {
     return (
       <Container>
         <Header style={commonStyles.header}
           iosBarStyle={colors.iosBarColor}
           androidStatusBarColor={colors.statusBarColor}>
-          <Left style={commonStyles.headerLeft} />
+          <Left style={commonStyles.headerLeft}>
+            <Button transparent onPress={() => this.props.history.goBack()}>
+              <Icon name='ios-arrow-back' style={{color: colors.white}} />
+            </Button>
+          </Left>
           <Body style={commonStyles.headerTitle}>
-            <Title style={commonStyles.headerText}>日常提醒</Title>
+            <Title style={commonStyles.headerText}>测试表单组件</Title>
           </Body>
           <Right />
         </Header>
 
         <Content style={styles.background}>
-          <FunctionListScreen />
+          <TestForm />
         </Content>
 
         <FooterDisplay />
@@ -52,11 +57,11 @@ class HomeScene extends Component {
   }
 }
 
-HomeScene.propTypes = {}
+TestScreen.propTypes = {}
 
 const mapDispatchToProps = (dispatch) => {
   return {}
 }
 const mapStateToProps = state => ({})
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScene)
+export default connect(mapStateToProps, mapDispatchToProps)(TestScreen)

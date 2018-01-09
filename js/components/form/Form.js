@@ -3,15 +3,15 @@ import { Route, Switch, withRouter, NativeRouter } from 'react-router-native'
 // import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import TestScene from './TestScene'
-import OptionsScene from './OptionsScene'
+import TestScreen from './TestScreen'
+import OptionsScreen from './OptionsScreen'
 
 class Birthday extends Component {
   render () {
     return (
       <Switch>
-        <Route exact path='/form' component={TestScene} />
-        <Route exact path='/form/options' component={OptionsScene} />
+        <Route exact path='/form' component={TestScreen} />
+        <Route exact path='/form/options' component={OptionsScreen} />
       </Switch>
     )
   }

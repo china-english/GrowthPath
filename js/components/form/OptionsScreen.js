@@ -123,7 +123,7 @@ const styles = {
   }
 }
 
-class ClientsOptionsScene extends Component {
+class OptionsScreen extends Component {
   props:{
     clients: Array<Object>,
     pageNumber: number,
@@ -172,12 +172,12 @@ class ClientsOptionsScene extends Component {
           <View style={commonStyles.backgroundWhite}>
             {state && state.map((content, index) =>
               <ListItem key={content.value} button onPress={() => this.onChange(content.value)}
-                style={{height: 55}} last={state.length -1 === index}>
+                style={{height: 55}} last={state.length - 1 === index}>
                 <Text style={Object.assign({}, {fontSize: 18}, this.state.selected === content.value ? {color: colors.orange500} : {})}>{content.name}</Text>
                 {this.state.selected === content.value &&
-                 <Right>
-                   <Icon name='checkmark' style={{fontSize: 40, color: colors.orange500}} />
-                 </Right>
+                <Right>
+                  <Icon name='checkmark' style={{fontSize: 40, color: colors.orange500}} />
+                </Right>
                 }
               </ListItem>)
             }
@@ -193,4 +193,4 @@ class ClientsOptionsScene extends Component {
   }
 }
 
-export default ClientsOptionsScene
+export default OptionsScreen

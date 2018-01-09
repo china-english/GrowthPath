@@ -27,7 +27,7 @@ const styles = {
   }
 }
 
-class HomeScene extends Component {
+class HomeScreen extends Component {
   render () {
     // 原计划本主页开始为antd-mobile，但是drawer使用有误，暂时放弃。
     // 开始使用native-base作为antd-mobile的进入口{/*<View>*/}
@@ -70,4 +70,4 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = state => ({})
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScene)
+export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen)

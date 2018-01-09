@@ -67,12 +67,12 @@ const functionData = [
     id: 'form',
     name: '表单',
     url: require('../../../images/head.png')
+  },
+  {
+    id: 'alert',
+    name: '全alert样式',
+    url: require('../../../images/happy_birthday.jpg')
   }
-  // {
-  //   id: 'all',
-  //   name: '凑数',
-  //   url: require('../../../images/happy_birthday.jpg')
-  // }
 ]
 
 class FunctionListScreen extends Component {
